@@ -1,0 +1,23 @@
+{
+ "quarters_used": 21,
+ "survey_universe": 29337,
+ "with_window": 3825,
+ "model_table": 3780,
+ "splits": {
+  "test": {
+   "surveys": 2388,
+   "positive": 216,
+   "rate": 0.09045226130653267,
+   "from": "2026-04-01",
+   "to": "2026-07-24"
+  },
+  "train": {
+   "surveys": 1392,
+   "positive": 141,
+   "rate": 0.10129310344827586,
+   "from": "2018-08-16",
+   "to": "2022-06-29"
+  }
+ },
+ "power_floor_met": false
+}

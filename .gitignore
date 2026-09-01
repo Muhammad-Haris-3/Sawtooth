@@ -18,3 +18,8 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# DuckDB working database, rebuilt by analysis/build_features.py
+data/sawtooth.duckdb
+data/sawtooth.duckdb.wal
+analysis/model_table.parquet

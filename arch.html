@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <base href="/provider-data/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PQDC</title>
+    <!-- Tealium Tag Manager - Automatic Pageviews Suppress -->
+    <script type="text/javascript">
+        window.utag_cfg_ovrd = window.utag_cfg_ovrd || {};
+        window.utag_cfg_ovrd.noview = true;
+        
+        const getEnvironment = () => {
+          const hostname = window.location.hostname;
+          const parts = hostname.split('.');
+          // For "dev.data.cms.gov", parts[0] would be "dev"
+          let env = ""
+          switch (parts[0]) {
+            case "test":
+            case "imp":
+              env = "qa"
+              break
+            case "data":
+              env = "prod"
+              break
+            default:
+              env = "dev"
+          }
+          return env
+        };
+                
+        // Dynamically create Tealium script tags with environment
+        const environment = getEnvironment();
+        
+        // Create SYNC script
+        const syncScript = document.createElement('script');
+        syncScript.type = 'text/javascript';
+        syncScript.src = `https://tealium-tags.cms.gov/cms-data/${environment}/utag.sync.js`;
+        document.head.appendChild(syncScript);
+        
+        // Create ASYNC script
+        const asyncScript = document.createElement('script');
+        asyncScript.type = 'text/javascript';
+        asyncScript.textContent = `
+          (function(a,b,c,d){
+              a='https://tealium-tags.cms.gov/cms-data/${environment}/utag.js';
+              b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/javascript';d.async=true;
+              a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+          })();
+        `;
+        document.head.appendChild(asyncScript);  
+    </script>
+    <script type="module" crossorigin src="/provider-data/js/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/provider-data/css/index.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

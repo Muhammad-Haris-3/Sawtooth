@@ -227,3 +227,94 @@ document's decision rule has been applied once.
 
 *v1.0 — 2026-09-01. Amendments append below with date and reason; the original
 text is never edited.*
+
+---
+
+# Amendment 1 — 2026-09-01
+
+**Reason: the v1.0 baseline could not be constructed without anachronism, and
+this was discovered while building the feature layer, before any outcome was
+joined.**
+
+Nothing in this amendment was informed by any result. No feature has yet been
+joined to any outcome.
+
+## What was found
+
+`provider_info` is published as a **single current snapshot** (2026-08-01).
+There is no archived or point-in-time version:
+
+- the dataset carries no `temporal` field and exactly one distribution,
+- the provider-data catalogue lists no archive-flavoured dataset among its 236,
+- the documented CMS archive URL patterns return 404.
+
+The v1.0 baseline named `staffing_rating`, `adjusted_total_nurse_staffing_
+hours_per_resident_per_day`, `adjusted_weekend_...`, `adjusted_rn_...`,
+`total_nursing_staff_turnover` and `registered_nurse_turnover`. **Every one of
+those is a 2026 value.** Survey dates in the frame run from 2018 to 2026, with
+the bulk in 2023–2026.
+
+Using a 2026 staffing rating as a predictor of a 2023 survey uses information
+that did not exist at prediction time. That is precisely the leakage the v1.0
+§2 guard was written to prevent, and v1.0 applied the guard to the challenger
+features while leaving the baseline exempt. **That was an error in v1.0.**
+
+## What changes
+
+**The primary baseline is reconstructed from PBJ, as of the same exposure
+window as the challenger features:**
+
+| Baseline feature | Source |
+|---|---|
+| `mean_hprd` | PBJ, exposure window |
+| `weekend_hprd` | PBJ, exposure window |
+| `rn_hprd` | PBJ, exposure window |
+| `number_of_certified_beds` | provider_info (approximately time-invariant) |
+| `ownership_type` | provider_info (approximately time-invariant) |
+| `state` | PBJ |
+
+`staffing_rating` and both turnover measures are **removed from the primary
+comparison**. They cannot be obtained as-of, and no imputation is honest here.
+
+The challenger is unchanged: baseline plus `low_day_freq`, `hprd_p10`,
+`hprd_cv`, `max_low_run`, `agency_share`, `agency_share_sd`.
+
+**This makes the primary test harder, not easier.** The v1.0 baseline
+discretised staffing into a 1–5 star rating; the amended baseline uses
+continuous as-of levels, which carry strictly more information. The question
+also becomes cleaner: *does the shape of the daily distribution add signal
+beyond its level?*
+
+## Secondary comparison, added and bounded
+
+The question "does this beat the rating CMS actually publishes?" is worth
+answering where it can be answered legitimately. It is therefore retained as a
+**secondary** analysis, restricted to surveys dated **2025-08-01 or later** —
+within twelve months of the provider_info snapshot — where the published values
+are approximately contemporaneous.
+
+This subset is reported with its own power check and is labelled
+*contemporaneous-subset* wherever it appears. It is never presented as the
+primary result.
+
+## Frame, restated for precision
+
+The survey universe is the union of `rating_cycle_1_standard_survey_health_date`
+and `rating_cycle_2_standard_health_survey_date` — **29,337 distinct facility
+surveys**. The citations file contains 41,191 distinct standard surveys
+reaching back to 2017, but it cannot supply zero-deficiency surveys, so it is
+not used to define the frame.
+
+**Declared limitation:** because provider_info exposes only the two most recent
+rating cycles, zero-deficiency surveys older than cycle 2 are unrecoverable.
+The frame is therefore concentrated in 2023–2026 and is not a complete census
+of 2017–2026 surveys. Stated here rather than discovered later.
+
+## Unchanged
+
+Decision rule (ΔAUC ≥ 0.03, paired bootstrap CI excluding zero, Brier no
+worse), power floor (≥2,000 test surveys and ≥500 positive events, else
+withheld), temporal split at 2024-07-01, the fixed 3.0 HPRD threshold, the
+exclusion of `weekend_gap`, and the publication commitment in §8.
+
+*v1.1 — 2026-09-01.*

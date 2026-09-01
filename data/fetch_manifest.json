@@ -20,6 +20,132 @@
   "sha256": "e501a347be667eb9ed1fffe68a244cfbb9d0c7cbd0e75d7ff184b89f3b1e2139",
   "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2017_Q3_bpnu-uej3.csv"
  },
+ "2017Q4": {
+  "bytes": 360847604,
+  "fetched_at": "2026-09-01T17:35:14Z",
+  "seconds": 160.1,
+  "sha256": "bc222ee2419326144a2ead9813ec1061a1f5732cf32e4f01abcfaac69ddc451a",
+  "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2017_Q4_4z4g-bf8w.csv"
+ },
+ "2018Q1": {
+  "bytes": 301768475,
+  "fetched_at": "2026-09-01T17:37:34Z",
+  "seconds": 123.4,
+  "sha256": "f27607de2cdabee36a3b622ee65cd3e4fb2aac49bfd565ee65913e41f3a6503c",
+  "url": "https://data.cms.gov/sites/default/files/2022-04/6bfe920d-b1a9-40b6-830d-6a4d22351efc/PBJ_dailynursestaffing_CY2018Q1.csv"
+ },
+ "2018Q2": {
+  "bytes": 304958513,
+  "fetched_at": "2026-09-01T17:39:56Z",
+  "seconds": 128.7,
+  "sha256": "66469d44ca954798dc73008a67502c44c1334d3894c15725ad5837b3ba3372d7",
+  "url": "https://data.cms.gov/sites/default/files/2022-04/ce6dfc7f-d813-4139-b8ec-21179429a8a1/PBJ_dailynursestaffing_CY2018Q2.csv"
+ },
+ "2018Q3": {
+  "bytes": 312668019,
+  "fetched_at": "2026-09-01T17:42:07Z",
+  "seconds": 116.9,
+  "sha256": "415603f7268b0621ee6fcac427044a3560c81a711572cfd6127068f488e16e27",
+  "url": "https://data.cms.gov/sites/default/files/2022-04/5ee40dca-6c36-43e6-a8d2-b009078b5f5b/PBJ_dailynursestaffing_CY2018Q3.csv"
+ },
+ "2018Q4": {
+  "bytes": 379826411,
+  "fetched_at": "2026-09-01T17:45:04Z",
+  "seconds": 163.2,
+  "sha256": "e125a4aa15a18444b9181f172f9d4e1e1d4fc01203c3f34ca41942ee5ccb0023",
+  "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2018_Q4_kiqr-gzba.csv"
+ },
+ "2019Q1": {
+  "bytes": 376253142,
+  "fetched_at": "2026-09-01T17:47:52Z",
+  "seconds": 153.2,
+  "sha256": "7ada2bb89cff87cc0c16567055fef7148b4de770e25f68fc95b819f931a9ebea",
+  "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2019_Q1_aayb-gfzp.csv"
+ },
+ "2019Q2": {
+  "bytes": 378464041,
+  "fetched_at": "2026-09-01T17:50:21Z",
+  "seconds": 135.5,
+  "sha256": "2cebe42717acfa684d7638e9f46b9f547a33b9945e98e7566f9e8c532bad50bf",
+  "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2019_Q2_4juw-fxcf.csv"
+ },
+ "2019Q3": {
+  "bytes": 382824465,
+  "fetched_at": "2026-09-01T17:53:00Z",
+  "seconds": 143.2,
+  "sha256": "3deb67bfbc2db698c0d0d3c781ca0898c3b095dc785ec1cb8117832ff949b405",
+  "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2019_Q3_rqet-pmzi.csv"
+ },
+ "2019Q4": {
+  "bytes": 382377339,
+  "fetched_at": "2026-09-01T17:55:55Z",
+  "seconds": 164.0,
+  "sha256": "396ae92ea0a7d1cee6430a9590b105443a780d4990bf1cce5ede90136d0310b7",
+  "url": "https://data.cms.gov/sites/default/files/2020-10/PBJ_Nurse_2019_Q4_iwq5-t3v2.csv"
+ },
+ "2020Q1": {
+  "bytes": 252121131,
+  "fetched_at": "2026-09-01T17:57:59Z",
+  "seconds": 112.5,
+  "sha256": "e1c0b0961f514c6c5016e200e0f57c8b3379efa83b91a776b9a949fcf0f59ef1",
+  "url": "https://data.cms.gov/sites/default/files/2021-10/bbd1bc7d-46cf-4df5-99ff-ba18e7605ccb/PBJ_dailynursestaffing_CY2020Q1.csv"
+ },
+ "2020Q2": {
+  "bytes": 372919807,
+  "fetched_at": "2026-09-01T18:00:47Z",
+  "seconds": 161.0,
+  "sha256": "c41a098dc8573c4d1cb78039b469b67be218b585ebad170359ea2ae3577e0458",
+  "url": "https://data.cms.gov/sites/default/files/2020-11/PBJ_Nurse_Q2_2020_ym5d-ceq8.csv"
+ },
+ "2020Q3": {
+  "bytes": 377426881,
+  "fetched_at": "2026-09-01T18:03:40Z",
+  "seconds": 162.4,
+  "sha256": "6dd5fe322c0b98930aa31400d53623b5c88a22b51e4adfbe558314e3e6c11d62",
+  "url": "https://data.cms.gov/sites/default/files/2021-01/2qky-49qq.csv"
+ },
+ "2020Q4": {
+  "bytes": 286071415,
+  "fetched_at": "2026-09-01T18:06:15Z",
+  "seconds": 134.7,
+  "sha256": "c6e70def349e3107d20a3e8fbe8742f64d6604c4fa493f161f6b8a42fc67365c",
+  "url": "https://data.cms.gov/sites/default/files/2021-07/pbj_daily_nurse_staffing_cy_2020q4.csv"
+ },
+ "2021Q1": {
+  "bytes": 305602395,
+  "fetched_at": "2026-09-01T18:08:52Z",
+  "seconds": 137.8,
+  "sha256": "6bc38ddcb6665e720726276c2fa83c3f4771948a409c7424e290b3abb90b09ba",
+  "url": "https://data.cms.gov/sites/default/files/2022-02/472cc63b-d76f-4ae5-9258-0041843508f7/PBJ_dailynursestaffing_CY2021Q1.csv"
+ },
+ "2021Q2": {
+  "bytes": 308038785,
+  "fetched_at": "2026-09-01T18:11:31Z",
+  "seconds": 141.0,
+  "sha256": "87438ca5839880ba0f8ff925201589829b13012d4a403bb4a25ae74d289f43c7",
+  "url": "https://data.cms.gov/sites/default/files/2021-10/e4ca12be-7096-412c-a3ab-e67a1669e3aa/PBJ_dailynursestaffing_CY2021Q2.csv"
+ },
+ "2021Q3": {
+  "bytes": 311377078,
+  "fetched_at": "2026-09-01T18:14:12Z",
+  "seconds": 149.1,
+  "sha256": "83aef6e76858c18c2d26c70decb1c45fbdd05de0c96963dc3dc1a23a3e1c5737",
+  "url": "https://data.cms.gov/sites/default/files/2022-01/416c11d0-1ef7-4178-94a3-6b4ebeef4677/PBJ_dailynursestaffing_CY2021Q3.csv"
+ },
+ "2021Q4": {
+  "bytes": 307038812,
+  "fetched_at": "2026-09-01T18:17:27Z",
+  "seconds": 138.3,
+  "sha256": "8c7b1c759d3437459c64626aebbe7c5cdd460ffe929cd5e681eeed4443c247e9",
+  "url": "https://data.cms.gov/sites/default/files/2022-04/2adf6f4d-f402-4a6c-a428-e0156e6c2fdf/PBJ_dailynursestaffing_CY2021Q4.csv"
+ },
+ "2022Q1": {
+  "bytes": 303837250,
+  "fetched_at": "2026-09-01T18:20:58Z",
+  "seconds": 146.5,
+  "sha256": "61381095ce170e47879e11c7a6212c31bd3c0f3d7994c3724565f6bfd1c914cb",
+  "url": "https://data.cms.gov/sites/default/files/2022-07/c47359c6-4bba-4620-893c-69d54090f5ae/PBJ_dailynursestaffing_CY2022Q1.csv"
+ },
  "2026Q1": {
   "bytes": 234273667,
   "fetched_at": "2026-09-01T17:16:52Z",
