@@ -23,3 +23,7 @@ Thumbs.db
 data/sawtooth.duckdb
 data/sawtooth.duckdb.wal
 analysis/model_table.parquet
+
+# scratch from source probing
+arch.html
+pd*.json
