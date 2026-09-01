@@ -27,3 +27,6 @@ analysis/model_table.parquet
 # scratch from source probing
 arch.html
 pd*.json
+
+# static export output
+web/out/
