@@ -70,7 +70,7 @@ export default function RedundancyBars({ corr }: { corr: Corr }) {
 
       <p style={{ margin: "0.75rem 0 0", fontSize: "0.82rem", color: "var(--ink-3)" }}>
         <span style={{ color: "var(--critical)" }}>Rose</span> — already contained in the level.{" "}
-        <span style={{ color: "var(--s1)" }}>Mint</span> — genuinely independent of it.
+        <span style={{ color: "var(--s1-ink)" }}>Mint</span> — genuinely independent of it.
       </p>
     </div>
   );

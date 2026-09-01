@@ -48,7 +48,7 @@ export default function GapHistogram({ bins, median, nDrop20, nTotal }: Props) {
         <span>{bins[0][0]}%</span>
         <span>0</span>
         <span>median {median.toFixed(1)}%</span>
-        <span style={{ color: "var(--s2)" }}>20% and worse — {nDrop20.toLocaleString()}</span>
+        <span style={{ color: "var(--s2-ink)" }}>20% and worse — {nDrop20.toLocaleString()}</span>
         <span>{bins[bins.length - 1][0]}%</span>
       </div>
     </figure>

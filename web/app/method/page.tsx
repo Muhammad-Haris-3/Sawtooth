@@ -136,7 +136,7 @@ export default function Method() {
           }}
         >
           <div style={{ border: "1px solid var(--line)", background: "var(--surface)", padding: "1.2rem" }}>
-            <div className="label" style={{ color: "var(--s1)", marginBottom: "0.5rem" }}>
+            <div className="label" style={{ color: "var(--s1-ink)", marginBottom: "0.5rem" }}>
               Leakage guard
             </div>
             <p style={{ margin: 0, fontSize: "0.93rem" }}>
@@ -147,7 +147,7 @@ export default function Method() {
             </p>
           </div>
           <div style={{ border: "1px solid var(--line)", background: "var(--surface)", padding: "1.2rem" }}>
-            <div className="label" style={{ color: "var(--s2)", marginBottom: "0.5rem" }}>
+            <div className="label" style={{ color: "var(--s2-ink)", marginBottom: "0.5rem" }}>
               Staleness guard
             </div>
             <p style={{ margin: 0, fontSize: "0.93rem" }}>

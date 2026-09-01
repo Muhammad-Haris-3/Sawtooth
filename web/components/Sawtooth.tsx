@@ -55,7 +55,7 @@ export default function Sawtooth({ dow, weekday, weekend, gapPct }: Props) {
 
           {/* weekend region — an annotation, not a series */}
           <rect x={x(4.5)} y={M.top} width={x(6) + M.right - x(4.5)} height={ih} fill="var(--s2)" opacity={0.055} />
-          <text x={x(5.5)} y={M.top + 16} textAnchor="middle" className="mono" fontSize="10" letterSpacing="0.14em" fill="var(--s2)" opacity={0.75}>
+          <text x={x(5.5)} y={M.top + 16} textAnchor="middle" className="mono" fontSize="10" letterSpacing="0.14em" fill="var(--s2-ink)" opacity={0.75}>
             WEEKEND
           </text>
 
@@ -84,7 +84,7 @@ export default function Sawtooth({ dow, weekday, weekend, gapPct }: Props) {
           <text x={x(peak)} y={y(vals[peak]) - 17} textAnchor="middle" className="mono tnum" fontSize="11" fill="var(--ink-2)">
             {vals[peak].toFixed(3)}
           </text>
-          <text x={x(trough)} y={y(vals[trough]) + 24} textAnchor="end" className="mono tnum" fontSize="11" fill="var(--s2)">
+          <text x={x(trough)} y={y(vals[trough]) + 24} textAnchor="end" className="mono tnum" fontSize="11" fill="var(--s2-ink)">
             {vals[trough].toFixed(3)}
           </text>
 
@@ -104,7 +104,7 @@ export default function Sawtooth({ dow, weekday, weekend, gapPct }: Props) {
           ))}
 
           {SHORT.map((s, i) => (
-            <text key={s} x={x(i)} y={H - 18} textAnchor="middle" className="mono" fontSize="11" fill={i >= 5 ? "var(--s2)" : "var(--ink-3)"}>
+            <text key={s} x={x(i)} y={H - 18} textAnchor="middle" className="mono" fontSize="11" fill={i >= 5 ? "var(--s2-ink)" : "var(--ink-3)"}>
               {s}
             </text>
           ))}
@@ -151,7 +151,7 @@ export default function Sawtooth({ dow, weekday, weekend, gapPct }: Props) {
         }}
       >
         <span>Weekday <strong className="mono tnum" style={{ color: "var(--ink)", fontWeight: 500 }}>{weekday.toFixed(3)}</strong></span>
-        <span>Weekend <strong className="mono tnum" style={{ color: "var(--s2)", fontWeight: 500 }}>{weekend.toFixed(3)}</strong></span>
+        <span>Weekend <strong className="mono tnum" style={{ color: "var(--s2-ink)", fontWeight: 500 }}>{weekend.toFixed(3)}</strong></span>
         <span>Gap <strong className="mono tnum" style={{ color: "var(--ink)", fontWeight: 500 }}>{gapPct.toFixed(1)}%</strong></span>
         <span style={{ marginLeft: "auto", color: "var(--ink-3)" }}>hover the chart</span>
       </figcaption>

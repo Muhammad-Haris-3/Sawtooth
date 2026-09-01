@@ -141,7 +141,7 @@ export default function FacilitySearch() {
                     >
                       {g == null ? "—" : `${g.toFixed(1)}%`}
                     </td>
-                    <td className="mono tnum" style={{ color: "var(--s2)" }}>{r[IDX.star] ?? "—"}</td>
+                    <td className="mono tnum" style={{ color: "var(--s2-ink)" }}>{r[IDX.star] ?? "—"}</td>
                   </tr>
                 );
               })}
