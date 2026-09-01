@@ -74,7 +74,12 @@ export type Flagged = {
   rows: [string, string, string, string, number, number, number | null][];
 };
 
+// NEW — the weekend-drop histogram, already exported by the analysis step
+// but not previously read by the site.
+export type GapHist = { bin_width: number; bins: [number, number][] };
+
 export const getSawtooth = () => read<Sawtooth>("sawtooth.json");
 export const getResults = () => read<Results>("results.json");
 export const getRedundancy = () => read<Redundancy>("redundancy.json");
 export const getFlagged = () => read<Flagged>("flagged.json");
+export const getGapHist = () => read<GapHist>("gap_hist.json");

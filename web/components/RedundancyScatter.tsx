@@ -32,7 +32,7 @@ export default function RedundancyScatter({ points, r, nTotal }: Props) {
   const ticks = [2, 3, 4, 5, 6, 7];
 
   return (
-    <figure style={{ margin: 0 }}>
+    <figure className="panel" style={{ margin: 0, padding: "1.5rem" }}>
       <div className="scroll-x">
         <svg
           viewBox={`0 0 ${W} ${H}`}
@@ -105,9 +105,9 @@ export default function RedundancyScatter({ points, r, nTotal }: Props) {
 
           {/* Dense overplotted cloud: needs enough presence to read as a mass
               on a dark surface, but stay translucent so density is visible. */}
-          <g fill="var(--s1)" opacity={0.45}>
+          <g fill="var(--s1)" opacity={0.5}>
             {shown.map((p, i) => (
-              <circle key={i} cx={x(p[0])} cy={y(p[1])} r={2.4} />
+              <circle key={i} cx={x(p[0])} cy={y(p[1])} r={2.3} />
             ))}
           </g>
 
@@ -146,7 +146,7 @@ export default function RedundancyScatter({ points, r, nTotal }: Props) {
                 cy={hover.y}
                 r={5}
                 fill="var(--s2)"
-                stroke="var(--surface)"
+                stroke="var(--paper)"
                 strokeWidth="2"
               />
               <rect
@@ -155,8 +155,8 @@ export default function RedundancyScatter({ points, r, nTotal }: Props) {
                 width={150}
                 height={38}
                 rx={3}
-                fill="var(--surface)"
-                stroke="var(--rule-hard)"
+                fill="var(--paper)"
+                stroke="var(--line-strong)"
               />
               <text
                 x={Math.min(hover.x + 10, W - 158) + 9}
@@ -201,7 +201,7 @@ export default function RedundancyScatter({ points, r, nTotal }: Props) {
         </svg>
       </div>
       <figcaption
-        style={{ marginTop: "0.75rem", fontSize: "0.85rem", color: "var(--ink-2)" }}
+        style={{ marginTop: "1.1rem", paddingTop: "1.1rem", borderTop: "1px solid var(--line)", fontSize: "0.86rem", color: "var(--ink-2)" }}
       >
         <strong className="tnum">r = {r.toFixed(3)}</strong> across{" "}
         <span className="tnum">{nTotal.toLocaleString()}</span> surveys.{" "}

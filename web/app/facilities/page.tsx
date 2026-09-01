@@ -52,7 +52,7 @@ export default function Facilities() {
       </section>
 
       <section style={{ display: "flex", flexDirection: "column", gap: "0.9rem" }}>
-        <div className="scroll-x" style={{ border: "1px solid var(--rule)", background: "var(--surface)" }}>
+        <div className="scroll-x" style={{ border: "1px solid var(--line)", background: "var(--surface)" }}>
           <table>
             <thead>
               <tr>
@@ -86,7 +86,7 @@ export default function Facilities() {
       </section>
 
       <section style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-        <div style={{ borderTop: "1px solid var(--rule-hard)", paddingTop: "1rem" }}>
+        <div style={{ borderTop: "1px solid var(--line-strong)", paddingTop: "1rem" }}>
           <span className="label">Look up any facility</span>
         </div>
         <h2 className="display" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}>

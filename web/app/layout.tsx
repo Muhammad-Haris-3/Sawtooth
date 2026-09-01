@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Newsreader, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Literata, Figtree, IBM_Plex_Mono } from "next/font/google";
 import Link from "next/link";
+import ThemeToggle, { THEME_INIT } from "@/components/ThemeToggle";
 import "./globals.css";
 
-const display = Newsreader({
+const display = Literata({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-display",
 });
-const body = IBM_Plex_Sans({
+const body = Figtree({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body",
 });
 const mono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   variable: "--font-mono",
 });
 
@@ -35,25 +36,32 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Stamp the stored theme before first paint so there is no flash. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
+      </head>
       <body className={`${display.variable} ${body.variable} ${mono.variable}`}>
         <header
           style={{
-            borderBottom: "1px solid var(--rule-hard)",
-            background: "var(--surface)",
             position: "sticky",
             top: 0,
-            zIndex: 10,
+            zIndex: 50,
+            borderBottom: "1px solid var(--line)",
+            // 72% surface + blur: the rule reads as a seam, not a wall
+            background: "color-mix(in oklab, var(--paper) 72%, transparent)",
+            backdropFilter: "blur(14px) saturate(1.5)",
+            WebkitBackdropFilter: "blur(14px) saturate(1.5)",
           }}
         >
           <nav
             style={{
-              maxWidth: 1180,
+              maxWidth: 1220,
               margin: "0 auto",
-              padding: "0.75rem 1.375rem",
+              padding: "0.9rem 1.5rem",
               display: "flex",
-              alignItems: "baseline",
-              gap: "1.5rem",
+              alignItems: "center",
+              gap: "1.25rem",
               flexWrap: "wrap",
             }}
           >
@@ -61,69 +69,86 @@ export default function RootLayout({
               href="/"
               className="display"
               style={{
-                fontSize: "1.35rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.6rem",
+                fontSize: "1.3rem",
                 fontWeight: 600,
+                color: "var(--ink)",
                 textDecoration: "none",
-                letterSpacing: "-0.02em",
               }}
             >
+              <span className="pulse-dot" aria-hidden />
               Sawtooth
             </Link>
-            <div style={{ display: "flex", gap: "1.1rem", flexWrap: "wrap" }}>
+
+            <div style={{ display: "flex", gap: "1.6rem", flexWrap: "wrap" }}>
               {NAV.map((n) => (
-                <Link
-                  key={n.href}
-                  href={n.href}
-                  style={{
-                    fontSize: "0.9rem",
-                    color: "var(--ink-2)",
-                    textDecoration: "none",
-                  }}
-                >
+                <Link key={n.href} href={n.href} className="nav-link">
                   {n.label}
                 </Link>
               ))}
             </div>
+
             <a
               href="https://github.com/Muhammad-Haris-3/Sawtooth"
+              className="mono"
               style={{
                 marginLeft: "auto",
-                fontSize: "0.82rem",
+                fontSize: "0.76rem",
+                letterSpacing: "0.04em",
                 color: "var(--ink-3)",
+                border: "1px solid var(--line)",
+                borderRadius: 999,
+                padding: "0.35rem 0.85rem",
                 textDecoration: "none",
+                transition: "all var(--dur-2) var(--ease-out)",
               }}
-              className="mono"
             >
               source ↗
             </a>
+
+            <ThemeToggle />
           </nav>
         </header>
+
         <main
+          className="rise"
           style={{
-            maxWidth: 1180,
+            maxWidth: 1220,
             margin: "0 auto",
-            padding: "3rem 1.375rem 5rem",
+            padding: "5rem 1.5rem 7rem",
           }}
         >
           {children}
         </main>
+
         <footer
           style={{
-            borderTop: "1px solid var(--rule)",
-            padding: "1.5rem 1.375rem 3rem",
+            borderTop: "1px solid var(--line)",
+            padding: "2.5rem 1.5rem 4rem",
           }}
         >
           <div
             style={{
-              maxWidth: 1180,
+              maxWidth: 1220,
               margin: "0 auto",
+              display: "flex",
+              justifyContent: "space-between",
+              gap: "2rem",
+              flexWrap: "wrap",
               color: "var(--ink-3)",
-              fontSize: "0.85rem",
+              fontSize: "0.84rem",
             }}
           >
-            Sawtooth · CMS Payroll-Based Journal, 37 quarters, 49,202,720
-            facility-days · pre-registration committed before any feature was
-            joined to any outcome · all sources free, public and keyless
+            <p style={{ margin: 0, maxWidth: "62ch" }}>
+              Sawtooth · CMS Payroll-Based Journal, 37 quarters, 49,202,720
+              facility-days · pre-registration committed before any feature was
+              joined to any outcome · all sources free, public and keyless
+            </p>
+            <span className="mono" style={{ fontSize: "0.76rem" }}>
+              2026Q1
+            </span>
           </div>
         </footer>
       </body>

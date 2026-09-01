@@ -20,7 +20,7 @@ function Section({
 }) {
   return (
     <section style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      <div style={{ borderTop: "1px solid var(--rule-hard)", paddingTop: "1rem" }}>
+      <div style={{ borderTop: "1px solid var(--line-strong)", paddingTop: "1rem" }}>
         <span className="label">
           {n} · {title}
         </span>
@@ -63,7 +63,7 @@ export default function Method() {
               href={href}
               style={{
                 padding: "0.6rem 1rem",
-                border: "1px solid var(--rule-hard)",
+                border: "1px solid var(--line-strong)",
                 background: "var(--surface)",
                 textDecoration: "none",
                 fontSize: "0.88rem",
@@ -80,7 +80,7 @@ export default function Method() {
           Confirmation required <em>all three</em>. Any other outcome is a null
           and is published as one.
         </p>
-        <div className="scroll-x" style={{ border: "1px solid var(--rule)", background: "var(--surface)" }}>
+        <div className="scroll-x" style={{ border: "1px solid var(--line)", background: "var(--surface)" }}>
           <table>
             <thead>
               <tr>
@@ -135,7 +135,7 @@ export default function Method() {
             gap: "1.2rem",
           }}
         >
-          <div style={{ border: "1px solid var(--rule)", background: "var(--surface)", padding: "1.2rem" }}>
+          <div style={{ border: "1px solid var(--line)", background: "var(--surface)", padding: "1.2rem" }}>
             <div className="label" style={{ color: "var(--s1)", marginBottom: "0.5rem" }}>
               Leakage guard
             </div>
@@ -146,7 +146,7 @@ export default function Method() {
               in code; a violation raises rather than warns.
             </p>
           </div>
-          <div style={{ border: "1px solid var(--rule)", background: "var(--surface)", padding: "1.2rem" }}>
+          <div style={{ border: "1px solid var(--line)", background: "var(--surface)", padding: "1.2rem" }}>
             <div className="label" style={{ color: "var(--s2)", marginBottom: "0.5rem" }}>
               Staleness guard
             </div>
@@ -194,7 +194,7 @@ export default function Method() {
           None of this is visible from the CMS catalogue. Each would corrupt a
           naive load.
         </p>
-        <div className="scroll-x" style={{ border: "1px solid var(--rule)", background: "var(--surface)" }}>
+        <div className="scroll-x" style={{ border: "1px solid var(--line)", background: "var(--surface)" }}>
           <table>
             <thead>
               <tr>
@@ -271,7 +271,7 @@ export default function Method() {
           on <span className="tnum">{res.diagnostics.interpretable.n.toLocaleString()}</span>{" "}
           surveys.
         </p>
-        <div className="scroll-x" style={{ border: "1px solid var(--rule)", background: "var(--surface)" }}>
+        <div className="scroll-x" style={{ border: "1px solid var(--line)", background: "var(--surface)" }}>
           <table>
             <thead>
               <tr>

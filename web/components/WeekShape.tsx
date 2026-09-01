@@ -32,28 +32,13 @@ export default function WeekShape({
       viewBox={`0 0 ${width} ${height}`}
       style={{ display: "block" }}
       role="img"
-      aria-label={DAYS.map(
-        (d2, i) => `${d2} ${Number.isNaN(vals[i]) ? "n/a" : vals[i].toFixed(2)}`
-      ).join(", ")}
+      aria-label={DAYS.map((d2, i) => `${d2} ${Number.isNaN(vals[i]) ? "n/a" : vals[i].toFixed(2)}`).join(", ")}
     >
-      <rect
-        x={x(4.5)}
-        y={0}
-        width={width - x(4.5)}
-        height={height}
-        fill="var(--critical)"
-        opacity={0.07}
-      />
-      <path d={d} fill="none" stroke="var(--s1)" strokeWidth="2" strokeLinejoin="round" />
+      <rect x={x(4.5)} y={0} width={width - x(4.5)} height={height} fill="var(--s2)" opacity={0.07} />
+      <path d={d} fill="none" stroke="var(--s1)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
       {vals.map((v, i) =>
         Number.isNaN(v) ? null : (
-          <circle
-            key={i}
-            cx={x(i)}
-            cy={y(v)}
-            r={i >= 5 ? 2.8 : 2}
-            fill={i >= 5 ? "var(--s2)" : "var(--s1)"}
-          />
+          <circle key={i} cx={x(i)} cy={y(v)} r={i >= 5 ? 2.8 : 2} fill={i >= 5 ? "var(--s2)" : "var(--s1)"} />
         )
       )}
     </svg>
