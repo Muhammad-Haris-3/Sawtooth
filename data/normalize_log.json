@@ -1,0 +1,54 @@
+{
+ "2017Q1": {
+  "csv_bytes": 347756347,
+  "encoding_repaired_lines": 0,
+  "facilities": 13929,
+  "first_day": "2017-01-01",
+  "flagged_incomplete": 0,
+  "last_day": "2017-03-31",
+  "null_census": 0,
+  "parquet_bytes": 27909371,
+  "quarter": "2017Q1",
+  "rows": 1253610,
+  "source_lines": 1253611
+ },
+ "2017Q2": {
+  "csv_bytes": 353024529,
+  "encoding_repaired_lines": 0,
+  "facilities": 13984,
+  "first_day": "2017-04-01",
+  "flagged_incomplete": 0,
+  "last_day": "2017-06-30",
+  "null_census": 0,
+  "parquet_bytes": 27955116,
+  "quarter": "2017Q2",
+  "rows": 1272544,
+  "source_lines": 1272545
+ },
+ "2017Q3": {
+  "csv_bytes": 369519405,
+  "encoding_repaired_lines": 0,
+  "facilities": 14477,
+  "first_day": "2017-07-01",
+  "flagged_incomplete": 0,
+  "last_day": "2017-09-30",
+  "null_census": 0,
+  "parquet_bytes": 29566359,
+  "quarter": "2017Q3",
+  "rows": 1331884,
+  "source_lines": 1331885
+ },
+ "2026Q1": {
+  "csv_bytes": 234273667,
+  "encoding_repaired_lines": 360,
+  "facilities": 14487,
+  "first_day": "2026-01-01",
+  "flagged_incomplete": 0,
+  "last_day": "2026-03-31",
+  "null_census": 0,
+  "parquet_bytes": 32350928,
+  "quarter": "2026Q1",
+  "rows": 1303830,
+  "source_lines": 1303831
+ }
+}

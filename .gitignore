@@ -1,0 +1,20 @@
+# Data is rebuilt from public CMS sources by ingest/; never committed.
+# The fetch manifest (data/*.json) IS committed - it is the record of what was
+# downloaded, with sha256 of every file, so results stay checkable.
+data/raw/
+data/interim/
+data/parquet/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,42 @@
+{
+ "deficiencies": {
+  "url": "https://data.cms.gov/provider-data/sites/default/files/resources/600f5d1861dd2e0280b2e961e8396245_1786724148/NH_HealthCitations_Aug2026.csv",
+  "bytes": 165336194,
+  "sha256": "54d6e3e7c4c183da210601f2a1b59abff6f23a0aff49d5a9f097105e6fd97741",
+  "rows": 419479,
+  "distinct_ccn": 14627,
+  "columns": 23,
+  "encoding_repaired_lines": 0,
+  "fetched_at": "2026-09-01T17:21:51Z"
+ },
+ "penalties": {
+  "url": "https://data.cms.gov/provider-data/sites/default/files/resources/22b16c9dfd718b1b2a003eb8d4222046_1786724150/NH_Penalties_Aug2026.csv",
+  "bytes": 2712484,
+  "sha256": "3683f1debe5a19073075b3d5a1ceaa417971705d725d8c72cb568db95a39124d",
+  "rows": 15696,
+  "distinct_ccn": 6775,
+  "columns": 14,
+  "encoding_repaired_lines": 0,
+  "fetched_at": "2026-09-01T17:21:55Z"
+ },
+ "provider_info": {
+  "url": "https://data.cms.gov/provider-data/sites/default/files/resources/328596835e6db31b2564cd733c3795f4_1786724150/NH_ProviderInfo_Aug2026.csv",
+  "bytes": 9151628,
+  "sha256": "a5808fcded1ca73a629fde88fc23dcba3b6ff8ed75199883062a262e14ef8fe0",
+  "rows": 14690,
+  "distinct_ccn": 14690,
+  "columns": 99,
+  "encoding_repaired_lines": 0,
+  "fetched_at": "2026-09-01T17:22:01Z"
+ },
+ "ownership": {
+  "url": "https://data.cms.gov/provider-data/sites/default/files/resources/cc4bedc83a7b3752efb24f7817a856ce_1786724150/NH_Ownership_Aug2026.csv",
+  "bytes": 57251685,
+  "sha256": "550ef28dc3a2c5ac544760023b5cb494e5fbd77567848dca36324211dd83aa68",
+  "rows": 249452,
+  "distinct_ccn": 14690,
+  "columns": 13,
+  "encoding_repaired_lines": 0,
+  "fetched_at": "2026-09-01T17:22:29Z"
+ }
+}
