@@ -44,8 +44,9 @@ were supposed to improve on.
 | `agency_share_sd` | 0.036 |
 | `agency_share` | **0.017** |
 
-A facility's 10th-percentile day correlates **0.958** with its mean. The "floor"
-and the "level" are very nearly the same number.
+A facility's 10th-percentile day correlates **0.955** with its quarterly mean,
+and **0.958** with its weekend mean. The "floor" and the "level" are very nearly
+the same number.
 
 This is the finding underneath the null, and it was not obvious in advance. The
 project's premise was that a mean discards the distribution's shape. For nurse
@@ -85,7 +86,7 @@ result is in-sample, on the training period, at a corrected alpha. It is a
 hypothesis for someone else to pre-register, not a finding this project has
 earned.
 
-**A technical caveat that matters:** with `hprd_p10` correlating 0.958 with
+**A technical caveat that matters:** with `hprd_p10` correlating 0.955 with
 `mean_hprd`, the individual coefficients in that table are barely identified.
 That `mean_hprd` is not significant should be read as collinearity, not as
 evidence that staffing level does not matter.
@@ -138,7 +139,7 @@ minimums generally assumes.**
 A pre-registered test that returned a clean null, plus two by-products worth
 more than the original hypothesis:
 
-1. **`hprd_p10` ≈ `mean_hprd` at r = 0.958.** Daily staffing data adds less to
+1. **`hprd_p10` ≈ `mean_hprd` at r = 0.955.** Daily staffing data adds less to
    nursing-home quality measurement than its granularity suggests. Anyone
    planning to mine PBJ for distributional signal should see this number first.
 2. **Staffing predicts cited harm at AUC ≈ 0.61.** Weak, for the published star

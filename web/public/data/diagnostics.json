@@ -1,0 +1,139 @@
+{
+ "redundancy": {
+  "low_day_freq": {
+   "mean_hprd": -0.7581400115196307,
+   "weekend_hprd": -0.7436609335553258,
+   "rn_hprd": -0.33413035548269715,
+   "max_abs": 0.7581400115196307
+  },
+  "hprd_p10": {
+   "mean_hprd": 0.9551802306981887,
+   "weekend_hprd": 0.958121302673681,
+   "rn_hprd": 0.5558287485852856,
+   "max_abs": 0.958121302673681
+  },
+  "hprd_cv": {
+   "mean_hprd": -0.133049216255286,
+   "weekend_hprd": -0.17831609047600497,
+   "rn_hprd": 0.01954223978268852,
+   "max_abs": 0.17831609047600497
+  },
+  "max_low_run": {
+   "mean_hprd": -0.5991969833235733,
+   "weekend_hprd": -0.5819801161737499,
+   "rn_hprd": -0.24152359029939002,
+   "max_abs": 0.5991969833235733
+  },
+  "agency_share": {
+   "mean_hprd": 0.016608868391088546,
+   "weekend_hprd": 0.017494654633274015,
+   "rn_hprd": 0.0016871125412211588,
+   "max_abs": 0.017494654633274015
+  },
+  "agency_share_sd": {
+   "mean_hprd": -0.03593966407792992,
+   "weekend_hprd": -0.029359816937571157,
+   "rn_hprd": -0.010313686323778595,
+   "max_abs": 0.03593966407792992
+  }
+ },
+ "interpretable": {
+  "n": 8218,
+  "pseudo_r2": 0.014788410585965472,
+  "coefficients": {
+   "mean_hprd": {
+    "coef": -0.07424068983449397,
+    "p": 0.7500525258089238,
+    "expected": "-",
+    "observed": "-",
+    "significant": false
+   },
+   "weekend_hprd": {
+    "coef": -0.019347210542856798,
+    "p": 0.9129054341003137,
+    "expected": "-",
+    "observed": "-",
+    "significant": false
+   },
+   "rn_hprd": {
+    "coef": -0.002858228155067234,
+    "p": 0.953623087467955,
+    "expected": "-",
+    "observed": "-",
+    "significant": false
+   },
+   "beds": {
+    "coef": 0.08313847717304534,
+    "p": 0.008480164843978337,
+    "expected": "+",
+    "observed": "+",
+    "significant": true
+   },
+   "low_day_freq": {
+    "coef": 0.019979982217616155,
+    "p": 0.7735575840662008,
+    "expected": "+",
+    "observed": "+",
+    "significant": false
+   },
+   "hprd_p10": {
+    "coef": -0.1433303849935593,
+    "p": 0.5173253192257925,
+    "expected": "-",
+    "observed": "-",
+    "significant": false
+   },
+   "hprd_cv": {
+    "coef": -0.12405631681598114,
+    "p": 0.08573327413296435,
+    "expected": "+",
+    "observed": "-",
+    "significant": false
+   },
+   "max_low_run": {
+    "coef": -0.0063657214261558055,
+    "p": 0.8970251212466973,
+    "expected": "+",
+    "observed": "-",
+    "significant": false
+   },
+   "agency_share": {
+    "coef": 0.04268036406079186,
+    "p": 0.30651313136104175,
+    "expected": "+",
+    "observed": "+",
+    "significant": false
+   },
+   "agency_share_sd": {
+    "coef": 0.1805234584901134,
+    "p": 6.044309259518752e-05,
+    "expected": "+",
+    "observed": "+",
+    "significant": true
+   }
+  }
+ },
+ "neg_binomial": {
+  "shape_significant": {
+   "agency_share": 0.008803257412967636,
+   "agency_share_sd": 3.74493407968857e-07
+  },
+  "params": {
+   "mean_hprd": -0.27276690579967455,
+   "weekend_hprd": 0.14435918350579907,
+   "rn_hprd": -0.06034396745811665,
+   "beds": 0.06680548504002316,
+   "low_day_freq": 0.0071611052320222,
+   "hprd_p10": 0.01917773179084847,
+   "hprd_cv": 0.030136581779466445,
+   "max_low_run": 0.0013334812554615949,
+   "agency_share": 0.033809340981384675,
+   "agency_share_sd": 0.07025842902693073
+  }
+ },
+ "penalty_outcome": {
+  "surveys": 25274,
+  "events": 3973,
+  "usable": true
+ }
+}

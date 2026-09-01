@@ -17,12 +17,12 @@ inspection harm that the published aggregates miss.
 
 **The shape of a facility's daily staffing does not predict inspection harm
 better than its level does — because the shape and the level are nearly the same
-number.** A facility's 10th-percentile staffing day correlates **0.958** with its
+number.** A facility's 10th-percentile staffing day correlates **0.955** with its
 quarterly mean. The information was never hiding in the daily data.
 
 Two by-products are worth more than the original hypothesis:
 
-- **`hprd_p10` ≈ `mean_hprd` at r = 0.958.** Daily PBJ data adds less
+- **`hprd_p10` ≈ `mean_hprd` at r = 0.955.** Daily PBJ data adds less
   distributional signal to quality measurement than its granularity suggests.
 - **Staffing predicts cited harm at AUC ≈ 0.61** — for CMS's published staffing
   star (0.6229) and for as-of reconstructed levels (0.6118) alike. Bed count is a
