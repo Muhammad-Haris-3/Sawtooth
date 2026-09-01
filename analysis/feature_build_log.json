@@ -1,23 +1,23 @@
 {
- "quarters_used": 21,
+ "quarters_used": 37,
  "survey_universe": 29337,
- "with_window": 3825,
- "model_table": 3780,
+ "with_window": 29019,
+ "model_table": 28762,
  "splits": {
   "test": {
-   "surveys": 2388,
-   "positive": 216,
-   "rate": 0.09045226130653267,
-   "from": "2026-04-01",
+   "surveys": 20544,
+   "positive": 2359,
+   "rate": 0.11482671339563863,
+   "from": "2024-07-01",
    "to": "2026-07-24"
   },
   "train": {
-   "surveys": 1392,
-   "positive": 141,
-   "rate": 0.10129310344827586,
+   "surveys": 8218,
+   "positive": 1171,
+   "rate": 0.1424920905329764,
    "from": "2018-08-16",
-   "to": "2022-06-29"
+   "to": "2024-06-30"
   }
  },
- "power_floor_met": false
+ "power_floor_met": true
 }

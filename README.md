@@ -7,10 +7,26 @@ Sawtooth asks whether the shape of a facility's daily staffing — its floor, it
 variance, its runs of thin days, its reliance on agency staff — predicts
 inspection harm that the published aggregates miss.
 
-> **Status: M0 complete, pre-registered, panel building. Nothing published.**
-> [`PREREGISTRATION.md`](PREREGISTRATION.md) fixes the frame, the features, the
-> decision threshold and the power floor, and it was committed **before any
-> staffing feature was joined to any outcome**.
+> **Status: complete. The pre-registered claim is null.**
+> Δ AUC **+0.0054** against a pre-registered threshold of 0.03, 95% CI
+> [−0.0024, +0.0131], on 20,543 held-out surveys with 2,358 harm events. The
+> power floor was met, so this is a null and not a withholding.
+> **[`FINDINGS.md`](FINDINGS.md)** · [`PREREGISTRATION.md`](PREREGISTRATION.md)
+> was committed **the day before**, before any feature was joined to any
+> outcome.
+
+**The shape of a facility's daily staffing does not predict inspection harm
+better than its level does — because the shape and the level are nearly the same
+number.** A facility's 10th-percentile staffing day correlates **0.958** with its
+quarterly mean. The information was never hiding in the daily data.
+
+Two by-products are worth more than the original hypothesis:
+
+- **`hprd_p10` ≈ `mean_hprd` at r = 0.958.** Daily PBJ data adds less
+  distributional signal to quality measurement than its granularity suggests.
+- **Staffing predicts cited harm at AUC ≈ 0.61** — for CMS's published staffing
+  star (0.6229) and for as-of reconstructed levels (0.6118) alike. Bed count is a
+  stronger predictor than any staffing measure in the model.
 
 ---
 
